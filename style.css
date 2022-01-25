@@ -1,9 +1,6 @@
-/* Import font family */
-/* Jura */
 @import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
-/* Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-/* End import */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
 
 /* --------------------------------------------------------------------------------------------------------- */
 
@@ -47,6 +44,8 @@ html {
   -o-user-select: none;
   user-select: none;
 }
+
+/* --------------------------------------------------------------------------------------------------------- */
 
 /* Main button  */
 .main-btn {
@@ -115,11 +114,6 @@ html {
   width: 100vw;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(background/background.jpg) center no-repeat;
-  /* linear-gradient applies a gradient color over the background.
-    rgba stands for reg-green-blue-alpha. The RGB values will set the color and the alpha value (0.7 = 70%) sets the amount of the background image visible over the RGB value color that we have set.
-    url sets the directory of the image we set as background.
-    center is the position of the background image we set.
-    The background-repeat property 'no-repeat' means that the background image will not be repeated in the division.  */
   background-size: cover;
 }
 /* End of page background */
@@ -127,7 +121,6 @@ html {
 /* --------------------------------------------------------------------------------------------------------- */
 
 /* Mouse cursor */
-
 /* Common property of both the mouse-circle and the mouse-dot */
 .mouse-circle,
 .mouse-dot {
@@ -218,6 +211,21 @@ html {
 
 /* end of logo */
 
+/* Info text  */
+.intro-text {
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 10rem;
+}
+
+.location-icon {
+  color: white;
+  font-size: 25;
+}
+/* End of Info text  */
+
 /* animated circle */
 
 .circles {
@@ -272,7 +280,6 @@ html {
   height: 30rem;
 }
 .main-circle img {
-  /* This property can be tweaked to change the design of the image */
   mix-blend-mode: exclusion;
   position: relative;
   top: 0;
@@ -290,7 +297,6 @@ html {
 .section-2 {
   position: relative;
   padding: 10rem 10rem 15rem 10rem;
-  /* background: rgba(30, 215, 96, 0.3); */
   background: rgba(94, 0, 135, 0.3);
 }
 
@@ -345,7 +351,7 @@ html {
   }
 }
 
-/* End of About me text  */
+/* End of About us text  */
 
 .section-2 .main-btn {
   left: 50%;
