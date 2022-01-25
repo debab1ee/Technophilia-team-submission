@@ -1,0 +1,370 @@
+/* Import font family */
+/* Jura */
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
+/* Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* End import */
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+/* Common style */
+.jura-font {
+  font-family: "Jura", sans-serif;
+}
+
+.poppins-font {
+  font-family: "Poppins", sans-serif;
+}
+
+.comfortaa-font {
+  font-family: "Comfortaa", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  cursor: none; /* Removes the cursor. We will use the mouse-circle and mouse-dot as the cursor in our webpage */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectDisable {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+/* Main button  */
+.main-btn {
+  position: absolute;
+  bottom: 3rem;
+  width: 13rem;
+  height: 5rem;
+  background-color: rgba(165, 42, 42, 0.5);
+  border-radius: 10px;
+  border: 0.3rem double black;
+  overflow: hidden;
+}
+
+.main-btn-content {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s, border 0.2s;
+}
+
+.main-btn:hover .main-btn-content {
+  transform: rotate(360deg);
+  transition: transform 0.5s, border 0.2s;
+}
+
+.main-btn span {
+  position: absolute;
+  color: #fff;
+  font-size: 1.5rem;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.ripple {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: darkred;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rippleAnim 0.5s forwards;
+}
+
+@keyframes rippleAnim {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 300%;
+    height: 300%;
+  }
+}
+/* End of main button  */
+
+/* End of common style */
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+/* Page background */
+.pageBackground {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(background/background.jpg) center no-repeat;
+  /* linear-gradient applies a gradient color over the background.
+    rgba stands for reg-green-blue-alpha. The RGB values will set the color and the alpha value (0.7 = 70%) sets the amount of the background image visible over the RGB value color that we have set.
+    url sets the directory of the image we set as background.
+    center is the position of the background image we set.
+    The background-repeat property 'no-repeat' means that the background image will not be repeated in the division.  */
+  background-size: cover;
+}
+/* End of page background */
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+/* Mouse cursor */
+
+/* Common property of both the mouse-circle and the mouse-dot */
+.mouse-circle,
+.mouse-dot {
+  border-radius: 50%;
+  position: fixed;
+  z-index: 300;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mouse-circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.1rem solid #fcff66;
+  animation: mouse-circle-anim 10s infinite linear;
+}
+
+.mouse-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #fff;
+  animation: mouse-dot-anim 2s infinite linear;
+}
+
+/* The animation properties of the mouse-circle and mouse-dot */
+
+@keyframes mouse-circle-anim {
+  0% {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  25% {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+  50% {
+    height: 3rem;
+    width: 3rem;
+  }
+  75% {
+    height: 2.75rem;
+    width: 2.75rem;
+  }
+  100% {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+@keyframes mouse_dot_anim {
+  0% {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  50% {
+    width: 1rem;
+    height: 1rem;
+  }
+  100% {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}
+
+/* End of mouse cursor */
+
+/* --------------------------------------------------------------------------------------------------------- */
+
+/* Section 1 */
+
+.section-1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* logo */
+
+.logo {
+  position: absolute;
+  top: 2rem;
+  left: 5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* end of logo */
+
+/* animated circle */
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.circle {
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50%;
+  background-color: blue;
+  align-self: center;
+  justify-self: center;
+  opacity: 0.5;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: left 2s, top 2s;
+}
+
+.circle-1 {
+  background: url(landing/gents.png) center no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  margin-left: -10rem;
+}
+
+.circle-2 {
+  background: url(landing/ladies.png) center no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  margin-right: -10rem;
+}
+
+.main-circle {
+  width: 20rem;
+  height: 20rem;
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: width 0.5s, height 0.5s;
+}
+
+.main-circle:hover {
+  width: 30rem;
+  height: 30rem;
+}
+.main-circle img {
+  /* This property can be tweaked to change the design of the image */
+  mix-blend-mode: exclusion;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: left 2s, top 2s;
+}
+
+/* end of animated circle */
+
+/* End of Section 1 */
+
+/* ---------------------------------------------------------------------------------------------- */
+
+/* Section 2 */
+.section-2 {
+  position: relative;
+  padding: 10rem 10rem 15rem 10rem;
+  /* background: rgba(30, 215, 96, 0.3); */
+  background: rgba(94, 0, 135, 0.3);
+}
+
+.section-2-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  word-break: break-all;
+  line-height: 1.5;
+}
+
+.about-us-text {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.about-us-text span {
+  font-size: 9rem;
+  font-weight: bold;
+  color: #aaa;
+  letter-spacing: 0.5rem;
+  line-height: 0.9;
+  text-shadow: 0 0 1rem #9b0e0e;
+  position: relative;
+  /* animation-timing-function: linear; */
+  /* mix-blend-mode: color-dodge; */
+}
+@keyframes aboutMeTextAnim {
+  0% {
+    color: #aaa;
+    top: 0;
+  }
+  100% {
+    color: white;
+    top: 0.5rem;
+  }
+}
+@keyframes aboutMeTextAnimOut {
+  0% {
+    color: white;
+    top: 0.5rem;
+  }
+  100% {
+    color: #aaa;
+    top: 0;
+  }
+}
+
+/* End of About me text  */
+
+.section-2 .main-btn {
+  left: 50%;
+  bottom: 5rem;
+  transform: translateX(-50%);
+}
+
+.team-name {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.project-info {
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* End of section 2 */
