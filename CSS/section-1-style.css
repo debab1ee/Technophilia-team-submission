@@ -72,8 +72,8 @@
 }
 
 .main-circle {
-    width: 20rem;
-    height: 20rem;
+    width: 30rem;
+    height: 30rem;
     position: absolute;
     border-radius: 50%;
     overflow: hidden;
@@ -81,11 +81,11 @@
 }
 
 .main-circle:hover {
-    width: 30rem;
-    height: 30rem;
+    width: 40rem;
+    height: 40rem;
 }
 .main-circle img {
-    mix-blend-mode: exclusion;
+    /*mix-blend-mode: exclusion;*/
     position: relative;
     top: 0;
     left: 0;

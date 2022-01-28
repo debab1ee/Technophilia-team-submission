@@ -1,71 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title class="jura-font">Project name</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="CSS/style.css" />
-    <link rel="stylesheet" href="CSS/mouse-style.css" />
-    <link rel="stylesheet" href="CSS/main-button-style.css" />
-    <link rel="stylesheet" href="CSS/section-1-style.css" />
-    <link rel="stylesheet" href="CSS/section-2-style.css" />
-  </head>
-  <body>
-    <!-- Mouse circle -->
-    <div class="mouse-circle" id="mouse-circle"></div>
-    <div class="mouse-dot" id="mouse-dot"></div>
-    <!-- End of mouse circle -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <!--    import css stylesheets-->
+    <link rel="stylesheet" href="CSS/style.css"/>
+    <link rel="stylesheet" href="CSS/mouse-style.css"/>
+    <link rel="stylesheet" href="CSS/main-button-style.css"/>
+    <link rel="stylesheet" href="CSS/section-1-style.css"/>
+    <link rel="stylesheet" href="CSS/section-2-style.css"/>
+    <link rel="stylesheet" href="CSS/navigation-style.css"/>
+</head>
+<body>
+<!-- Mouse circle -->
+<div class="mouse-circle" id="mouse-circle"></div>
+<div class="mouse-dot" id="mouse-dot"></div>
+<!-- End of mouse circle -->
 
-    <!-- page container -->
-    <div class="container">
-      <!-- page background -->
-      <div class="pageBackground"></div>
-      <!-- end of page background -->
+<!-- page container -->
+<div class="container">
+    <!-- page background -->
 
-      <!-- section 1 -->
+    <!--    CREDITS-->
+    <!--    <a href='https://www.freepik.com/vectors/school'>School vector created by upklyak - www.freepik.com</a>-->
+    <div class="pageBackground"></div>
+    <!-- end of page background -->
 
-      <section class="section-1 center">
+    <!--Navigation-->
+    <!--Menu icon-->
+    <i class="material-icons menu-icon" style="font-size: 48px">menu</i>
+    <!--    Menu icon-->
+    <!--Navbar-->
+    <nav class="navbar jura-font">
+        <a href="#section-1" class="navbar-link">HOME</a>
+        <a href="#section-2" class="navbar-link">ABOUT</a>
+        <a href="#section-3" class="navbar-link">TEAM</a>
+        <a href="#section-4" class="navbar-link">CONTACT</a>
+    </nav>
+    <!--End of Navbar-->
+
+    <!-- End of menu icon-->
+    <!--End of navigation-->
+
+    <!-- section 1 -->
+
+    <section class="section-1 center" id="section-1">
         <!-- logo -->
-        <a href="#" class="logo jura-font">Some Cool Name</a>
+        <a href="#" class="logo jura-font">Project name</a>
         <!-- end of logo -->
 
         <!-- Animated circles -->
-        <div class="circles">
-          <div class="circle circle-1"></div>
-          <div class="circle circle-2"></div>
-        </div>
+<!--        <div class="circles">-->
+<!--            <div class="circle circle-1"></div>-->
+<!--            <div class="circle circle-2"></div>-->
+<!--        </div>-->
         <div class="main-circle center">
-          <img src="landing/logo.png"  alt="logo"/>
+            <img src="landing/logo.png" alt="logo"/>
         </div>
         <!-- Animated circles -->
 
         <!-- intro-text -->
         <div class="intro-text comfortaa-font">
-          <p>
-            <span> Find privacy with just one click! </span>
-          </p>
+            <p>
+                <span> Nearby restrooms, just one click away </span>
+            </p>
         </div>
         <!-- /intro text -->
 
         <!-- The find button -->
         <a href="#" class="main-btn">
-          <div class="main-btn-content center">
-            <i class="material-icons location-icon">location_on</i>
-          </div>
+            <div class="main-btn-content center">
+                <i class="material-icons location-icon">location_on</i>
+            </div>
         </a>
         <!-- /The find button -->
-      </section>
-      <!-- End of section 1 -->
-      <!-------------------------------------------------------------------------------------------------------->
-      <!-- Section 2  -->
-      <section class="section-2">
+    </section>
+    <!-- End of section 1 -->
+    <!-------------------------------------------------------------------------------------------------------->
+    <!-- Section 2  -->
+    <section class="section-2" id="section-2">
         <!-- Team name  -->
         <div>
-          <p class="team-name comfortaa-font">
-            Our team, Hyperactive Coders present to you
-          </p>
+            <p class="team-name comfortaa-font">
+                Our team, Hyperactive Coders present to you
+            </p>
         </div>
         <!-- /Team name  -->
         <!-- About us text  -->
@@ -73,23 +94,33 @@
         <!-- /About us text  -->
         <!-- Project info text  -->
         <div>
-          <p class="project-info comfortaa-font">
+            <p class="project-tagline neonderthaw-font">
             <span>
-              We aim to provide you the locations of nearby public restrooms
-              seamlessly
+              Safe. Sanitized. Private.
             </span>
-          </p>
+            </p>
+            <p class="project-desc source-code-pro-font">
+            <span>
+              Our project aims to provide users with the locations of nearby restrooms no matter which city they are in.<br>
+              Finding a safe place for a few moments of privacy can turn out to be very difficult sometimes, and asking strangers for them can seem quite embarrassing. Even more if you end up at a place where the local people are not comfortable speaking your language.<br>
+              Our project aims to end all this. With just one click, we provide you with a list and location of nearby public restrooms and petrol-pumps, ensuring complete safety and hygiene.
+            </span>
+            </p>
         </div>
         <!-- /Project info text  -->
         <!-- End of Section 2 heading -->
-      </section>
-      <!-- End of section 2  -->
-    </div>
-    <!-- End of page container -->
+    </section>
+    <!-- End of section 2  -->
+</div>
+<!-- End of page container -->
 
-    <script src="JS/mouse-script.js"></script>
-    <script src="JS/animated-circle-script.js"></script>
-    <script src="JS/about-us-script.js"></script>
-    <script src="JS/main-button-script.js"></script>
-  </body>
+
+<!--__________________________________________________________________________________________-->
+<!--import javascript files-->
+<script src="JS/mouse-script.js"></script>
+<script src="JS/animated-circle-script.js"></script>
+<script src="JS/about-us-script.js"></script>
+<script src="JS/main-button-script.js"></script>
+<script src="JS/navigation-script.js"></script>
+</body>
 </html>

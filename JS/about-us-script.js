@@ -1,6 +1,6 @@
 // About us text
 const aboutUsText = document.querySelector(".about-us-text");
-const aboutUsTextContent = "Some cool name";
+const aboutUsTextContent = "Project Name";
 
 Array.from(aboutUsTextContent).forEach((char) => {
     const span = document.createElement("span");

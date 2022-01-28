@@ -1,0 +1,43 @@
+.menu-icon{
+    position: fixed;
+    width: 12rem;
+    height: 7rem;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+    color: white;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.show-menu-icon{
+    opacity: 1;
+    visibility: visible;
+}
+
+.navbar{
+    position: fixed;
+    display: flex;
+    top: 2.5rem;
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 3rem;
+    z-index: 100;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.hide-navbar{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.navbar-link{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    margin: 0 2.5rem;
+    text-shadow: 0 0.3rem 0.5rem grey;
+}

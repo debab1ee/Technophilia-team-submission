@@ -2,7 +2,9 @@
 .section-2 {
     position: relative;
     padding: 10rem 10rem 15rem 10rem;
-    background: rgba(94, 0, 135, 0.3);
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100%;
 }
 
 .section-2-heading {
@@ -35,6 +37,7 @@
     /* animation-timing-function: linear; */
     /* mix-blend-mode: color-dodge; */
 }
+
 @keyframes aboutMeTextAnim {
     0% {
         color: #aaa;
@@ -45,6 +48,7 @@
         top: 0.5rem;
     }
 }
+
 @keyframes aboutMeTextAnimOut {
     0% {
         color: white;
@@ -65,8 +69,15 @@
     padding: 2rem;
 }
 
-.project-info {
+.project-tagline {
     font-size: 3rem;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.project-desc {
+    font-size: 2rem;
     color: white;
     text-align: center;
     padding: 2rem;
