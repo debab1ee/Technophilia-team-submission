@@ -1,0 +1,61 @@
+/*Import fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+
+.jura-font {
+  font-family: "Jura", sans-serif;
+}
+
+.poppins-font {
+  font-family: "Poppins", sans-serif;
+}
+
+.comfortaa-font {
+  font-family: "Comfortaa", cursive;
+}
+/*End of importing fonts*/
+
+/*Common styles*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  cursor: none; /* Removes the cursor. We will use the mouse-circle and mouse-dot as the cursor in our webpage */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*End common styles*/
+
+/*Stuff taken from StackOverflow to disable certain portions of the webpage from being selected*/
+.selectDisable {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+
+/* Page background */
+.pageBackground {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../background/background.jpg) center no-repeat;
+  background-size: cover;
+}
+/* End of page background */
+

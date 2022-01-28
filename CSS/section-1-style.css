@@ -1,0 +1,95 @@
+/* Section 1 */
+
+.section-1 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* logo */
+
+.logo {
+    position: absolute;
+    top: 2rem;
+    left: 5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* end of logo */
+
+/* Info text  */
+.intro-text {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 10rem;
+}
+
+
+/* End of Info text  */
+
+/* animated circle */
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.circle {
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    background-color: blue;
+    align-self: center;
+    justify-self: center;
+    opacity: 0.5;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: left 2s, top 2s;
+}
+
+.circle-1 {
+    background: url(../landing/gents.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    margin-left: -10rem;
+}
+
+.circle-2 {
+    background: url(../landing/ladies.png) center no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    margin-right: -10rem;
+}
+
+.main-circle {
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: width 0.5s, height 0.5s;
+}
+
+.main-circle:hover {
+    width: 30rem;
+    height: 30rem;
+}
+.main-circle img {
+    mix-blend-mode: exclusion;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: left 2s, top 2s;
+}
+
+/* end of animated circle */

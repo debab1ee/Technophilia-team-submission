@@ -1,0 +1,75 @@
+/* Section 2 */
+.section-2 {
+    position: relative;
+    padding: 10rem 10rem 15rem 10rem;
+    background: rgba(94, 0, 135, 0.3);
+}
+
+.section-2-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    word-break: break-all;
+    line-height: 1.5;
+}
+
+.about-us-text {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.about-us-text span {
+    font-size: 9rem;
+    font-weight: bold;
+    color: #aaa;
+    letter-spacing: 0.5rem;
+    line-height: 0.9;
+    text-shadow: 0 0 1rem #9b0e0e;
+    position: relative;
+    /* animation-timing-function: linear; */
+    /* mix-blend-mode: color-dodge; */
+}
+@keyframes aboutMeTextAnim {
+    0% {
+        color: #aaa;
+        top: 0;
+    }
+    100% {
+        color: white;
+        top: 0.5rem;
+    }
+}
+@keyframes aboutMeTextAnimOut {
+    0% {
+        color: white;
+        top: 0.5rem;
+    }
+    100% {
+        color: #aaa;
+        top: 0;
+    }
+}
+
+/* End of About us text  */
+
+.team-name {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.project-info {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* End of section 2 */
