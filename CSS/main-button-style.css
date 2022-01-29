@@ -1,59 +1,37 @@
-
-/* Main button  */
 .main-btn {
-    position: absolute;
-    bottom: 3rem;
-    width: 13rem;
-    height: 5rem;
-    background-color: rgba(165, 42, 42, 0.5);
+    background-color: #1db954; /*Initial color of the button*/
+    top: 25rem;
+    padding: 20px 40px;
     border-radius: 10px;
-    border: 0.3rem double black;
-    overflow: hidden;
-}
-
-.main-btn-content {
-    width: 100%;
-    height: 100%;
-    transition: transform 0.5s, border 0.2s;
-}
-
-.main-btn:hover .main-btn-content {
-    transform: rotate(360deg);
-    transition: transform 0.5s, border 0.2s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9); /*This is the box shadow property. Increase the alpha value to make the shadow more dark*/
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    position: relative; /*We set the position of the button as relative so as to set it's value to absolute later on after we hover the cursor over the button*/
+    overflow: hidden; /*Set overflow to hidden to restrict the flow of the ripple inside the button*/
 }
 
 .main-btn span {
-    position: absolute;
-    color: #fff;
-    font-size: 1.5rem;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
+    position: relative;
+    z-index: 1; /*By default z-index is 0. But we set it to 1, so that the button text "BUTTON" doesn't get covered up by the ripple effect*/
 }
 
-.ripple {
-    position: absolute;
+.main-btn::before {
+    content: "";
+    position: absolute; /*To set the position to absolute, we need to make the parent relative, which we have explained earlier (line 19)*/
+    background-color: darkgreen; /*Ripple color on cursor hover*/
     width: 0;
     height: 0;
-    background-color: darkred;
+    /*The left and top variables are picked by the JavaScript to make the ripple appear from the area we hover our cursor*/
+    left: var(--xCoord);
+    top: var(--yCoord);
+    transform: translate(-50%, -50%); /*Start the ripple effect from the center*/
     border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: rippleAnim 0.5s forwards;
+    transition: width 0.5s, height 0.5s;  /*Animation time (time to cover width of button | time to cover width of button)*/
 }
 
-@keyframes rippleAnim {
-    0% {
-        width: 0;
-        height: 0;
-    }
-    100% {
-        width: 300%;
-        height: 300%;
-    }
-}
-
-.location-icon {
-    color: white;
-    font-size: 3rem;
+.main-btn:hover::before {
+    /*Intensity of the ripple*/
+    width: 300px;
+    height: 300px;
 }

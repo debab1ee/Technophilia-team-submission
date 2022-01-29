@@ -1,21 +1,15 @@
-// Main Button
-const mainBtns = document.querySelectorAll(".main-btn");
-mainBtns.forEach((btn) => {
-    btn.addEventListener("mouseenter", (e) => {
-        const left = e.clientX - e.target.getBoundingClientRect().left;
-        const top = e.clientY - e.target.getBoundingClientRect().top;
+const rippleButton = document.querySelector(".main-btn");  /*Import the button*/
 
-        ripple = document.createElement("div");
-        ripple.classList.add("ripple");
-        ripple.style.left = `${left}px`;
-        ripple.style.top = `${top}px`;
-        btn.prepend(ripple);
-    });
+/*What to do when the "mouseover" (cursor hover) event is triggered*/
+rippleButton.addEventListener("mouseover", (event) => {
+    // event.pageX basically determines the position of the cursor from the left of the window along the x-axis
+    // By using the "rippleButton.offsetLeft" with instanceof, we are setting the starting position from the left of the window to the left of "rippleButton", i.e., our basic button
+    const x = event.pageX - rippleButton.offsetLeft;
+    const y = event.pageY - rippleButton.offsetTop;
 
-    btn.addEventListener("mouseleave", () => {
-        btn.removeChild(ripple);
-    });
+    // Now we attach the beginning of the ripple effect inside the button to the position of the cursor while hovering over the button
+    // The variables --xCoord and --yCoord have been pre-defined in our css file (lines 35 and 36)
+    // We insert the value of the x and y coordinates (x, y) of the cursor in relation to the button, to the variables defined in the css file to mark the position of the beginning of the ripple effect
+    rippleButton.style.setProperty("--xCoord", x + "px");
+    rippleButton.style.setProperty("--yCoord", y + "px");
 });
-
-let ripple;
-// End of main button
